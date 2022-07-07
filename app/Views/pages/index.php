@@ -1,7 +1,10 @@
-<?php echo $this->extend('templates\default'); ?>
+<?php echo $this->extend('layouts/default'); ?>
 
 <?php echo $this->section('content'); ?>
 
+
+
+<?php echo "<pre>"; print_r($username); echo "</pre>";?>
 
 
 
@@ -863,7 +866,11 @@
               </div>
             </div>
           </div>
-
+          </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+</div>
 
 
 
