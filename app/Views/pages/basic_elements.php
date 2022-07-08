@@ -274,7 +274,7 @@
                                     <p class="card-description"> Horizontal form layout </p>
                                     <form class="forms-sample">
                                         <div class="form-group row">
-                                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Email</label>
+                                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Username</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username">
                                             </div>

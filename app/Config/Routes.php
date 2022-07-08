@@ -49,6 +49,7 @@ $routes->get('/login', 'Home::login');
 $routes->get('/mdi', 'Home::mdi');
 $routes->get('/register', 'Home::register');
 $routes->get('/typography', 'Home::typography');
+$routes->post('/login', 'Login::index');
 
 
 

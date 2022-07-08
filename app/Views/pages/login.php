@@ -28,14 +28,14 @@
                     <div class="card col-lg-4 mx-auto">
                         <div class="card-body px-5 py-5">
                             <h3 class="card-title text-left mb-3">Login</h3>
-                            <form>
+                            <form action="login" method="post">
                                 <div class="form-group">
                                     <label>Username or email *</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input type="text" class="form-control p_input" name="username">
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input type="text" class="form-control p_input" name="password">
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <!-- <div class="form-check">
@@ -46,8 +46,10 @@
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block enter-btn success">
-                                    <a class="nav-link" href="index">    
-                                    Login </a></button>
+                                        <!-- <a class="nav-link" href="index">     -->
+                                        Login
+                                        <!-- </a> -->
+                                    </button>
                                 </div>
                                 <!-- <div class="d-flex">
                                     <button class="btn btn-facebook mr-2 col">
