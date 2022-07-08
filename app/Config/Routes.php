@@ -36,15 +36,15 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-
-$routes->get('/basic-elements', 'Home::basic_elements');
-$routes->get('/basic-table', 'Home::basic_table');
-$routes->get('/blank-page', 'Home::blank_page');
+$routes->get('/index','Home::index');
+$routes->get('/basic_elements', 'Home::basic_elements');
+$routes->get('/basic_table', 'Home::basic_table');
+$routes->get('/blank_page', 'Home::blank_page');
 $routes->get('/buttons', 'Home::buttons');
 $routes->get('/chartjs', 'Home::chartjs');
 $routes->get('/dropdowns', 'Home::dropdowns');
-$routes->get('/error-404', 'Home::error_404');
-$routes->get('/error-500', 'Home::error_500');
+$routes->get('/error_404', 'Home::error_404');
+$routes->get('/error_500', 'Home::error_500');
 $routes->get('/login', 'Home::login');
 $routes->get('/mdi', 'Home::mdi');
 $routes->get('/register', 'Home::register');

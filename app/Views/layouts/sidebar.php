@@ -74,14 +74,14 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons">Buttons</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns">Dropdowns</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography">Typography</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="buttons">Buttons</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="dropdowns">Dropdowns</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="typography">Typography</a></li>
                 </ul>
             </div>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements">
+            <a class="nav-link" href="basic_elements">
                 <span class="menu-icon">
                     <i class="mdi mdi-playlist-play"></i>
                 </span>
@@ -89,7 +89,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table">
+            <a class="nav-link" href="basic_table">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
                 </span>
@@ -97,7 +97,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs">
+            <a class="nav-link" href="chartjs">
                 <span class="menu-icon">
                     <i class="mdi mdi-chart-bar"></i>
                 </span>
@@ -105,7 +105,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/icons/mdi">
+            <a class="nav-link" href="mdi">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
@@ -122,11 +122,11 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page"> Blank Page </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404"> 404 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500"> 500 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login"> Login </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register"> Register </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="blank_page"> Blank Page </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="error_404"> 404 </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="error_500"> 500 </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="login"> Login </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="register"> Register </a></li>
                 </ul>
             </div>
         </li>

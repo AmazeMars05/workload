@@ -23,7 +23,7 @@
 <body>
     <div class="container-scroller">
         <!-- partial:partials/_sidebar.html -->
-        <?php echo $this->include('layouts/header'); ?>
+
 
         <!-- partial:partials/_sidebar.html -->
         <?php echo $this->include('layouts/sidebar'); ?>
