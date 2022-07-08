@@ -14,3 +14,4 @@ class StockModel extends Model
     //protected $allowedFields = ['poid', 'quantity'];
 
 }
+?>

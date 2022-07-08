@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,19 +22,20 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="<?php echo base_url('public/css/style.css'); ?>">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="<?php echo base_url('public/images/favicon.png'); ?>" >
-  </head>
-  <body>
-    
-      <?php echo $this->include('layouts/header'); ?> 
-      <?php echo $this->include('layouts/sidebar'); ?>
-      <!-- partial -->
-      <?php echo $this->renderSection('content'); ?>
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-      <?php echo $this->include('layouts/footer'); ?>
-          <!-- partial -->
-        
+    <link rel="shortcut icon" href="<?php echo base_url('public/images/favicon.png'); ?>">
+</head>
+
+<body>
+
+    <?php echo $this->include('layouts/header'); ?>
+    <?php echo $this->include('layouts/sidebar'); ?>
+    <!-- partial -->
+    <?php echo $this->renderSection('content'); ?>
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <?php echo $this->include('layouts/footer'); ?>
+    <!-- partial -->
+
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="<?php echo base_url('public/assets/vendors/js/vendor.bundle.base.js'); ?>"></script>
@@ -55,5 +57,6 @@
     <!-- Custom js for this page -->
     <script src="<?php echo base_url('public/assets/js/dashboard.js'); ?>"></script>
     <!-- End custom js for this page -->
-  </body>
+</body>
+
 </html>

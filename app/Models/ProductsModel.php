@@ -11,6 +11,7 @@ class ProductsModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
     
-    protected $allowedFields = ['sid', 'pname','category','size'];
+    // protected $allowedFields = ['sid', 'pname','category','size'];
 
 }
+?>

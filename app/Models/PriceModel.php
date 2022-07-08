@@ -11,6 +11,7 @@ class PriceModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
     
-    protected $allowedFields = ['poid', 'size','price'];
+    // protected $allowedFields = ['poid', 'size','price'];
 
 }
+?>

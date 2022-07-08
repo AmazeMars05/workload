@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Models\UserModel;
 class Home extends BaseController
 {
     public function index()
     {
-        $Userlist = new \App\Models\UserModel;
+        $Userlist = new UserModel;
         $data = $Userlist->findAll();
         return view('pages/index',['username' => $data]);
     }
