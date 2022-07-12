@@ -28,9 +28,11 @@
                     <div class="card col-lg-4 mx-auto">
                         <div class="card-body px-5 py-5">
                             <h3 class="card-title text-left mb-3">Login</h3>
+                            <?php $validation = \Config\Services::validation();
+                            echo $validation->listErrors(); ?>
                             <form action="login" method="post">
                                 <div class="form-group">
-                                    <label>Username or email *</label>
+                                    <label>Username *</label>
                                     <input type="text" class="form-control p_input" name="username">
                                 </div>
                                 <div class="form-group">
@@ -45,11 +47,12 @@
                                     <a href="#" class="forgot-pass">Forgot password</a>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block enter-btn success">
+                                    <button type="submit" class="btn btn-outline-success btn-block enter-btn ">
                                         <!-- <a class="nav-link" href="index">     -->
                                         Login
                                         <!-- </a> -->
                                     </button>
+                                    
                                 </div>
                                 <!-- <div class="d-flex">
                                     <button class="btn btn-facebook mr-2 col">

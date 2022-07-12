@@ -1,0 +1,88 @@
+ERROR - 2022-07-10 13:42:58 --> Column 'username' cannot be null
+CRITICAL - 2022-07-10 13:42:58 --> Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO user (username, password) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO user (username, password) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO user (username, password) VALUES (NULL, NULL)')
+ 4 APPPATH\Controllers\Login.php(16): CodeIgniter\Database\BaseConnection->query('INSERT INTO user (username, password) VALUES (?, ?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->register()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-10 13:43:29 --> Column 'username' cannot be null
+CRITICAL - 2022-07-10 13:43:29 --> Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO user (username, password) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO user (username, password) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO user (username, password) VALUES (NULL, NULL)')
+ 4 APPPATH\Controllers\Login.php(16): CodeIgniter\Database\BaseConnection->query('INSERT INTO user (username, password) VALUES (?, ?)', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Login->register()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-10 14:17:31 --> Undefined variable $uname
+in APPPATH\Views\pages\register.php on line 46.
+ 1 APPPATH\Views\pages\register.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uname', 'APPPATH\\Views\\pages\\register.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/register', [], true)
+ 5 APPPATH\Controllers\Home.php(57): view('pages/register')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->register()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-10 14:44:05 --> Undefined array key "login"
+in APPPATH\Views\pages\index.php on line 7.
+ 1 APPPATH\Views\pages\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'APPPATH\\Views\\pages\\index.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('pages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-10 15:16:47 --> Undefined array key "username"
+in APPPATH\Views\pages\index.php on line 538.
+ 1 APPPATH\Views\pages\index.php(538): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Views\\pages\\index.php', 538)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('pages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-10 23:56:39 --> Undefined array key "username"
+in APPPATH\Views\pages\index.php on line 169.
+ 1 APPPATH\Views\pages\index.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Views\\pages\\index.php', 169)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('pages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-10 23:57:00 --> Undefined array key "username"
+in APPPATH\Views\pages\index.php on line 169.
+ 1 APPPATH\Views\pages\index.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Views\\pages\\index.php', 169)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('pages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-10 23:57:19 --> Undefined array key "username"
+in APPPATH\Views\pages\index.php on line 169.
+ 1 APPPATH\Views\pages\index.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Views\\pages\\index.php', 169)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/index', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('pages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

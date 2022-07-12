@@ -6,24 +6,21 @@ use CodeIgniter\Controller;
 
 class Login extends Controller
 {
-    public function index()
+    public function login()
     {
-        var_dump($this->request->getVar("password"));
-        // $this->input->get("password");
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $db = \Config\Database::connect();
+            $uname = $_POST["username"];
+            $pass = $_POST["password"];
 
-        // helper(['form', 'url']);
-
-        // if (!$this->validate([
-        //     'username' => 'required',
-        //     'password' => 'required|min_length[10]',
-        // ])) {
-        //     return view('login', [
-        //         'validation' => $this->validator,
-        //     ]);
-        // }
-
-        // return view('Success');
+            $sql = "SELECT * FROM user WHERE username=? AND password=?";
+            $result = $db->query($sql, [$uname, $pass]);
+            if ($result) {
+                session_start();
+                $_SESSION['login'] = true;
+                $_SESSION['username'] = $uname;
+                header("location: index.php");
+            }
+        }
     }
-
 }
-

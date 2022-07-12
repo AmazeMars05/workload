@@ -2,7 +2,22 @@
 
 <?php echo $this->section('content'); ?>
 
-
+<?php
+session_start();
+if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
+    echo "<h1>You are not loggin in.</h1>";
+    
+    exit;
+}
+?>
+<?php function destroy_session()
+{   session_start();
+    session_unset();
+    session_destroy();
+    
+    // return true;
+}
+?>
 <div class="container-fluid page-body-wrapper">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar p-0 fixed-top d-flex flex-row">
@@ -159,7 +174,7 @@
                     <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                         <div class="navbar-profile">
                             <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg" alt="">
-                            <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                            <p class="mb-0 d-none d-sm-block navbar-profile-name"><?php echo $_SESSION['username'] ?></p>
                             <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                         </div>
                     </a>
@@ -184,7 +199,7 @@
                                 </div>
                             </div>
                             <div class="preview-item-content">
-                                <p class="preview-subject mb-1">Log out</p>
+                                <p class="preview-subject mb-1"><a onclick="destroy_session();" href="login">Logout </a></p>
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>
@@ -528,7 +543,7 @@
                                             </td>
                                             <td>
                                                 <img src="assets/images/faces/face1.jpg" alt="image" />
-                                                <span class="pl-2">Henry Klein</span>
+                                                <span class="pl-2"><?php echo $_SESSION['username'] ?></span>
                                             </td>
                                             <td> 02312 </td>
                                             <td> $14,500 </td>
