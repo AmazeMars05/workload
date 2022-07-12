@@ -8,6 +8,7 @@ class Login extends Controller
 {
     public function login()
     {
+        // return redirect("register");
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $db = \Config\Database::connect();
             $uname = $_POST["username"];
@@ -19,7 +20,11 @@ class Login extends Controller
                 session_start();
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $uname;
-                header("location: index.php");
+                return redirect('index');
+            }
+            else{
+                echo "User not registered, or invalid details.";
+                return redirect()->back();
             }
         }
     }

@@ -28,6 +28,8 @@
                     <div class="card col-lg-4 mx-auto">
                         <div class="card-body px-5 py-5">
                             <h3 class="card-title text-left mb-3">Register</h3>
+                            <?php $validation = \Config\Services::validation();
+                            $validation->listErrors(); ?>
                             <form action="register" method="post">
                                 <div class="form-group">
                                     <label>Username</label>

@@ -5,17 +5,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
-    echo "<h1>You are not loggin in.</h1>";
+    echo "<h1>You are not logged in.</h1>";
     
     exit;
-}
-?>
-<?php function destroy_session()
-{   session_start();
-    session_unset();
-    session_destroy();
-    
-    // return true;
 }
 ?>
 <div class="container-fluid page-body-wrapper">
@@ -198,8 +190,8 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
                                     <i class="mdi mdi-logout text-danger"></i>
                                 </div>
                             </div>
-                            <div class="preview-item-content">
-                                <p class="preview-subject mb-1"><a onclick="destroy_session();" href="login">Logout </a></p>
+                            <div class="preview-item-content" >
+                                <p class="preview-subject mb-1"><a href="logout">Logout </a></p>
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>

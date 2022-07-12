@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input type="text" class="form-control p_input" name="password">
+                                    <input type="password" class="form-control p_input" name="password">
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <!-- <div class="form-check">
@@ -47,7 +47,7 @@
                                     <a href="#" class="forgot-pass">Forgot password</a>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-outline-success btn-block enter-btn ">
+                                    <button type="submit" class="btn btn-outline-success btn-block enter-btn " >
                                         <!-- <a class="nav-link" href="index">     -->
                                         Login
                                         <!-- </a> -->
