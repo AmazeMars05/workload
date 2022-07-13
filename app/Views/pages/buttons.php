@@ -24,14 +24,14 @@
     <div class="container-scroller">
         <!-- partial:partials/_sidebar.html -->
         <?php
-        session_start();
-        if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
-            echo "<h1>You are not logged in.</h1>";
-
-            exit;
+        include 'index.php';
+        class check1 extends check
+        {
+            //....
         }
+        $obj = new check1;
+        $obj->check_login();
         ?>
-
         <!-- partial:partials/_sidebar.html -->
         <?php echo $this->include('layouts/sidebar'); ?>
         <!-- partial -->

@@ -29,10 +29,10 @@
                         <div class="card-body px-5 py-5">
                             <h3 class="card-title text-left mb-3">Register</h3>
                             <?php $validation = \Config\Services::validation();
-                            $validation->listErrors(); ?>
+                            echo $validation->listErrors(); ?>
                             <form action="register" method="post">
                                 <div class="form-group">
-                                    <label>Username</label>
+                                    <label>Username *</label>
                                     <input type="text" name="username" class="form-control p_input" placeholder="username">
                                 </div>
                                 <!-- <div class="form-group">
@@ -40,7 +40,7 @@
                                     <input type="email" class="form-control p_input">
                                 </div> -->
                                 <div class="form-group">
-                                    <label>Password</label>
+                                    <label>Password *</label>
                                     <input type="password" name="password" class="form-control p_input" placeholder="password">
                                 </div>
 

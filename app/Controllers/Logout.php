@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
+// use CodeIgniter\Controller;
 
-class Logout extends Controller
+class Logout extends BaseController
 {
     public function logout()
     {

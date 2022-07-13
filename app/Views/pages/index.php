@@ -3,12 +3,24 @@
 <?php echo $this->section('content'); ?>
 
 <?php
-session_start();
-if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
-    echo "<h1>You are not logged in.</h1>";
-    
-    exit;
+class check
+{
+    function check_login()
+    {
+        session_start();
+        if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
+            echo "<h1>You are not logged in.";
+            echo "You will be redirected in 3 seconds";
+            echo "<script>
+                var timer = setTimeout(function() {
+                window.location='login'}, 3000);
+                </script></h1>";
+            exit;
+        }
+    }
 }
+$obj = new check;
+$obj->check_login();
 ?>
 <div class="container-fluid page-body-wrapper">
     <!-- partial:partials/_navbar.html -->
@@ -190,7 +202,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
                                     <i class="mdi mdi-logout text-danger"></i>
                                 </div>
                             </div>
-                            <div class="preview-item-content" >
+                            <div class="preview-item-content">
                                 <p class="preview-subject mb-1"><a href="logout">Logout </a></p>
                             </div>
                         </a>
