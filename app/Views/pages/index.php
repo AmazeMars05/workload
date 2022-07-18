@@ -3,21 +3,10 @@
 <?php echo $this->section('content'); ?>
 
 <?php
-class check
+include 'check_session.php';
+class check1 extends check
 {
-    function check_login()
-    {
-        session_start();
-        if (!isset($_SESSION['login']) || $_SESSION['login'] != true) {
-            echo "<h1>You are not logged in.";
-            echo "You will be redirected in 3 seconds";
-            echo "<script>
-                var timer = setTimeout(function() {
-                window.location='login'}, 3000);
-                </script></h1>";
-            exit;
-        }
-    }
+    //....
 }
 $obj = new check;
 $obj->check_login();

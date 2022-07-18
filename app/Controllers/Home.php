@@ -60,4 +60,20 @@ class Home extends BaseController
     {
         return view('pages/'."typography");
     }
+    public function add()
+    {
+        return view('pages/'."add");
+    }
+    public function upload()
+    {
+        return view('pages/'."upload");
+    }
+    public function display()
+    {
+        return view('pages/'."display");
+    }
+    public function update()
+    {
+        return view('pages/'."update");
+    }
 }

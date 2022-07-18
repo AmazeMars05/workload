@@ -49,18 +49,22 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
-    public function check_data()
-    {
-        $userModel = new \App\Models\UserModel();
-        $users = $userModel->find(1);
+    // public function check_data()
+    // {
+    //     $userModel = new \App\Models\UserModel();
+    //     $users = $userModel->find(1);
         
-        if (isset($users) ) {
-            echo "Not Empty";
-            return redirect('login');
-        }
-        else{
-            echo "Empty";
-            return redirect('register');
-        }
-    }
+    //     if (isset($users) ) {
+    //         echo "<script>
+    //             var timer = setTimeout(function() {
+    //             window.location='login'}, 0000);
+    //             </script>";
+    //     }
+    //     else{
+    //         echo "<script>
+    //             var timer = setTimeout(function() {
+    //             window.location='register'}, 0000);
+    //             </script>";
+    //     }
+    // }
 }

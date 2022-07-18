@@ -1,0 +1,11 @@
+CRITICAL - 2022-07-18 00:46:12 --> Unknown column 'poid' in 'order clause'
+in APPPATH\Views\pages\basic_table.php on line 265.
+ 1 APPPATH\Views\pages\basic_table.php(265): mysqli_query(Object(mysqli), 'SELECT * FROM stock WHERE stock.sid=1 ORDER by poid LIMIT 0,5')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\basic_table.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/basic_table', [], true)
+ 5 APPPATH\Controllers\Home.php(21): view('pages/basic_table')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->basic_table()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

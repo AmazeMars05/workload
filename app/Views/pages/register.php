@@ -21,6 +21,15 @@
 </head>
 
 <body>
+<?php
+    $userModel = new \App\Models\UserModel();
+    $users = $userModel->find(1);
+    if (isset($users)) {
+        echo "<script>
+                var timer = setTimeout(function() {
+                window.location='login'}, 0000);
+                </script>";
+    } ?>
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
             <div class="row w-100 m-0">

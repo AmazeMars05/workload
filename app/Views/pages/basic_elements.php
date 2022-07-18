@@ -26,7 +26,7 @@
 
     <div class="container-scroller">
         <?php
-        include 'index.php';
+        include 'check_session.php';
         class check1 extends check
         {
             //....

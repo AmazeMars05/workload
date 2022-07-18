@@ -50,8 +50,14 @@ $routes->get('/login', 'Home::login');
 $routes->get('/mdi', 'Home::mdi');
 $routes->get('/register', 'Home::register');
 $routes->get('/typography', 'Home::typography');
-
-
+// Routing for school
+$routes->post('/add', 'Add::add');
+$routes->get('/delete', 'Delete::delete');
+$routes->get('/upload', 'Home::upload');
+$routes->get('/display', 'Home::display');
+$routes->post('/update', 'Home::update');
+// Routing for school
+$routes->post('/stock', 'Add::stock');
 // Routing for register and login
 $routes->post('/register', 'Register::register');
 $routes->post('/login', 'Login::login');

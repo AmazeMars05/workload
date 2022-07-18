@@ -21,7 +21,15 @@
 </head>
 
 <body>
-    
+    <?php
+    $userModel = new \App\Models\UserModel();
+    $users = $userModel->find(1);
+    if (!isset($users)) {
+        echo "<script>
+                var timer = setTimeout(function() {
+                window.location='register'}, 0000);
+                </script>";
+    } ?>
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
             <div class="row w-100 m-0">
@@ -48,12 +56,12 @@
                                     <a href="#" class="forgot-pass">Forgot password</a>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-outline-success btn-block enter-btn " >
+                                    <button type="submit" class="btn btn-outline-success btn-block enter-btn ">
                                         <!-- <a class="nav-link" href="index">     -->
                                         Login
                                         <!-- </a> -->
                                     </button>
-                                    
+
                                 </div>
                                 <!-- <div class="d-flex">
                                     <button class="btn btn-facebook mr-2 col">

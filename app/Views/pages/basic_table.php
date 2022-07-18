@@ -25,7 +25,7 @@
         <!-- partial:partials/_sidebar.html -->
 
         <?php
-        include 'index.php';
+        include 'check_session.php';
         class check1 extends check
         {
             //....
@@ -242,6 +242,84 @@
                             </ol>
                         </nav>
                     </div>
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <center>Stock</center>
+                                </h4>
+                                <p class="card-description"> Stock of available products.
+                                </p>
+                                <?php
+                                // Display the products as pagination with maximum products in a page.
+                                $limit = 5;
+                                $page = (isset($_GET['page']) && is_numeric($_GET['page'])) ? $_GET['page'] : 1;
+                                $paginationStart = ($page - 1) * $limit;
+                                $db = mysqli_connect('localhost', 'Mann', 'Charumann@05', 'uniforms');
+                                $query = "SELECT COUNT(*) AS stid FROM stock";
+                                $result = mysqli_query($db, $query);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                $total = $row['stid'];
+                                $pages = ceil($total / $limit);
+                                $query1 = "SELECT * FROM stock WHERE stock.sid=1 ORDER by stid LIMIT $paginationStart,$limit";
+                                $result1 = mysqli_query($db, $query1);
+                                ?>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th> Product ID </th>
+                                                <th> Product name </th>
+                                                <th> Size </th>
+                                                <th> Category </th>
+                                                <th> Quantity </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC)) { ?>
+                                                <tr>
+                                                <td><?php echo ($row1['stid']); ?></td>
+                                                    <td><?php echo ($row1['pname']); ?></td>
+                                                    <input type="hidden" class="form-control" id="sid" name="sid" value="<?php echo ($row1['sid']);  ?>" readonly>
+                                                    <td><?php echo ($row1['size']); ?></td>
+                                                    <td><?php echo ($row1['category']); ?></td>
+                                                    <td><?php echo ($row1['quantity']); ?></td>
+                                                    <!-- <td><img src="" height="80px" width="150px">
+                                                <input name="fileToUpload[]" class="form-control" type="file" multiple>
+                                            </td> -->
+                                                    <!-- <td><button type="submit" formaction="update" class="form-control">Update</button></td> -->
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- Add products here -->
+                                <?php $validation = \Config\Services::validation();
+                                echo $validation->listErrors(); ?>
+                                <form class="form-inline" action="stock" method="post">                            
+                                <div class="input-group mb-2 mr-sm-2">
+                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="pname" placeholder="Product name">
+                                    </div>
+
+                                    <input type="hidden" class="form-control" id="sid" name="sid" value="1">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername2" name="size" placeholder="Size">
+                                    </div>
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <select class="form-control" id="inlineFormInputGroupUsername2" name="category">
+                                            <option value="-">Category</option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <input type="number" class="form-control" id="inlineFormInputGroupUsername2" name="quantity" placeholder="Quantity">
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-primary btn-lg mb-2">Add</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-6 grid-margin stretch-card">
                             <div class="card">
@@ -342,121 +420,6 @@
                                                     <td>53275535</td>
                                                     <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
                                                     <td><label class="badge badge-warning">In progress</label></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Striped Table</h4>
-                                    <p class="card-description"> Add class <code>.table-striped</code>
-                                    </p>
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th> User </th>
-                                                    <th> First name </th>
-                                                    <th> Progress </th>
-                                                    <th> Amount </th>
-                                                    <th> Deadline </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-1.png" alt="image" />
-                                                    </td>
-                                                    <td> Herman Beck </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $ 77.99 </td>
-                                                    <td> May 15, 2015 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-2.png" alt="image" />
-                                                    </td>
-                                                    <td> Messsy Adam </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $245.30 </td>
-                                                    <td> July 1, 2015 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-3.png" alt="image" />
-                                                    </td>
-                                                    <td> John Richards </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $138.00 </td>
-                                                    <td> Apr 12, 2015 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-4.png" alt="image" />
-                                                    </td>
-                                                    <td> Peter Meggik </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $ 77.99 </td>
-                                                    <td> May 15, 2015 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-1.png" alt="image" />
-                                                    </td>
-                                                    <td> Edward </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $ 160.25 </td>
-                                                    <td> May 03, 2015 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-2.png" alt="image" />
-                                                    </td>
-                                                    <td> John Doe </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $ 123.21 </td>
-                                                    <td> April 05, 2015 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="py-1">
-                                                        <img src="assets/images/faces-clipart/pic-3.png" alt="image" />
-                                                    </td>
-                                                    <td> Henry Tom </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td> $ 150.00 </td>
-                                                    <td> June 16, 2015 </td>
                                                 </tr>
                                             </tbody>
                                         </table>

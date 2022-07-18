@@ -8,7 +8,6 @@ class Register extends BaseController
 {
     public function register()
     {
-        $this->check_data();
         helper(['register', 'url']);
         if (!$this->validate([
             'username' => ['label' => 'Username', 'rules' => 'required'],
@@ -32,7 +31,14 @@ class Register extends BaseController
         // header("location: login.php");
 
         $db->close();
-        return redirect('login');
+        echo "<script>
+        window.alert(Congrats! You are now successfully registered.);
+        </script>";
+            echo "<script>
+                var timer = setTimeout(function() {
+                window.location='login'}, 3000);
+                </script></h1>";
+        // return redirect('login');
 
         // return view('Success');
     }

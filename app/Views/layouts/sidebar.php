@@ -69,14 +69,14 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-laptop"></i>
                 </span>
-                <span class="menu-title">Basic UI Elements</span>
+                <span class="menu-title">School list</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="buttons">Buttons</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="dropdowns">Dropdowns</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="typography">Typography</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="buttons">School-1</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="dropdowns">School-2</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="typography">School-3</a></li>
                 </ul>
             </div>
         </li>
@@ -85,7 +85,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-playlist-play"></i>
                 </span>
-                <span class="menu-title">Form Elements</span>
+                <span class="menu-title">Bill</span>
             </a>
         </li>
         <li class="nav-item menu-items">
@@ -93,7 +93,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
                 </span>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Inventory</span>
             </a>
         </li>
         <li class="nav-item menu-items">
@@ -101,7 +101,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-chart-bar"></i>
                 </span>
-                <span class="menu-title">Charts</span>
+                <span class="menu-title">Chalan</span>
             </a>
         </li>
         <li class="nav-item menu-items">
@@ -109,7 +109,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
-                <span class="menu-title">Icons</span>
+                <span class="menu-title">Report</span>
             </a>
         </li>
         <li class="nav-item menu-items">

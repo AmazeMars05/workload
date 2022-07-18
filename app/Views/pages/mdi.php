@@ -24,7 +24,7 @@
     <div class=" container-scroller">
         <!-- partial:partials/_sidebar.html -->
         <?php
-        include 'index.php';
+        include 'check_session.php';
         class check1 extends check
         {
             //....
