@@ -24,9 +24,9 @@ class Home extends BaseController
     {
         return view('pages/'."blank_page");
     }
-    public function buttons()
+    public function school_list()
     {
-        return view('pages/'."buttons");
+        return view('pages/'."school_list");
     }
     public function chartjs()
     {

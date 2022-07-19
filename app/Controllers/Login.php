@@ -33,6 +33,7 @@ class Login extends BaseController
                 session_start();
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $uname;
+                $_SESSION['sid'] = 1;
                 return redirect('index');
             }
             echo "<h1>User not registered, or invalid details.";

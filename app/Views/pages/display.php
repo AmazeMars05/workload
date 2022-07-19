@@ -207,7 +207,7 @@ if (!isset($_SESSION['login'])) {
                                         <a class="page-link" href="<?php if ($page >= $pages) {
                                                                         echo '#';
                                                                     } else {
-                                                                        echo "?page=" . $next;
+                                                                        // echo "?page=" . $next;
                                                                     } ?>">Next</a>
                                     </li>
                                 </ul>

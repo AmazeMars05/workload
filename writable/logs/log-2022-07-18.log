@@ -9,3 +9,362 @@ in APPPATH\Views\pages\basic_table.php on line 265.
  7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-18 03:14:32 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-18 03:14:32 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(586): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `user`.`id` = :user.id:', [...], false)
+ 3 SYSTEMPATH\Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(true, 1)
+ 5 APPPATH\Views\pages\login.php(26): CodeIgniter\BaseModel->find(1)
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\login.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/login', [], true)
+ 9 APPPATH\Controllers\Home.php(49): view('pages/login')
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->login()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:27:19 --> Undefined array key "poid"
+in APPPATH\Controllers\Delete.php on line 15.
+ 1 APPPATH\Controllers\Delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "poid"', 'APPPATH\\Controllers\\Delete.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Delete->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:32:19 --> Undefined array key "poid"
+in APPPATH\Controllers\Delete.php on line 15.
+ 1 APPPATH\Controllers\Delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "poid"', 'APPPATH\\Controllers\\Delete.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Delete->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:32:56 --> Undefined array key "poid"
+in APPPATH\Controllers\Delete.php on line 15.
+ 1 APPPATH\Controllers\Delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "poid"', 'APPPATH\\Controllers\\Delete.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Delete->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:36:58 --> Unknown column 'size' in 'field list'
+in APPPATH\Views\pages\blank_page.php on line 260.
+ 1 APPPATH\Views\pages\blank_page.php(260): mysqli_query(Object(mysqli), 'SELECT category, poid, size, sid, pname FROM products WHERE sid=1 ORDER by poid LIMIT 0,5')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\blank_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/blank_page', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('pages/blank_page')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->blank_page()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:37:38 --> Unknown column 'size' in 'field list'
+in APPPATH\Views\pages\blank_page.php on line 260.
+ 1 APPPATH\Views\pages\blank_page.php(260): mysqli_query(Object(mysqli), 'SELECT category, poid, size, sid, pname FROM products WHERE sid=1 ORDER by poid LIMIT 0,5')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\blank_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/blank_page', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('pages/blank_page')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->blank_page()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:40:39 --> Undefined variable $pager
+in APPPATH\Views\pages\buttons.php on line 294.
+ 1 APPPATH\Views\pages\buttons.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\pages\\buttons.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:42:33 --> Undefined variable $pager
+in APPPATH\Views\pages\buttons.php on line 294.
+ 1 APPPATH\Views\pages\buttons.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\pages\\buttons.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 03:42:34 --> Undefined variable $pager
+in APPPATH\Views\pages\buttons.php on line 294.
+ 1 APPPATH\Views\pages\buttons.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\pages\\buttons.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:07:40 --> Undefined variable $pager
+in APPPATH\Views\pages\buttons.php on line 294.
+ 1 APPPATH\Views\pages\buttons.php(294): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\pages\\buttons.php', 294)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:18:28 --> Cannot use object of type stdClass as array
+in APPPATH\Views\pages\buttons.php on line 269.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 4 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:23:11 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::asArray()
+in APPPATH\Views\pages\buttons.php on line 252.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 4 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:29:27 --> Undefined variable $poid
+in APPPATH\Views\pages\buttons.php on line 268.
+ 1 APPPATH\Views\pages\buttons.php(268): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $poid', 'APPPATH\\Views\\pages\\buttons.php', 268)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:31:21 --> Undefined variable $poid
+in APPPATH\Views\pages\buttons.php on line 268.
+ 1 APPPATH\Views\pages\buttons.php(268): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $poid', 'APPPATH\\Views\\pages\\buttons.php', 268)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:32:15 --> Undefined variable $pager
+in APPPATH\Views\pages\buttons.php on line 285.
+ 1 APPPATH\Views\pages\buttons.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'APPPATH\\Views\\pages\\buttons.php', 285)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:39:06 --> Undefined variable $page
+in APPPATH\Views\pages\dropdowns.php on line 313.
+ 1 APPPATH\Views\pages\dropdowns.php(313): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'APPPATH\\Views\\pages\\dropdowns.php', 313)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\dropdowns.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/dropdowns', [], true)
+ 5 APPPATH\Controllers\Home.php(37): view('pages/dropdowns')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->dropdowns()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:48:00 --> Undefined array key "poid"
+in APPPATH\Controllers\Delete.php on line 15.
+ 1 APPPATH\Controllers\Delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "poid"', 'APPPATH\\Controllers\\Delete.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Delete->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:49:22 --> Undefined array key "poid"
+in APPPATH\Controllers\Delete.php on line 15.
+ 1 APPPATH\Controllers\Delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "poid"', 'APPPATH\\Controllers\\Delete.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Delete->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 04:49:29 --> Undefined array key "poid"
+in APPPATH\Controllers\Delete.php on line 15.
+ 1 APPPATH\Controllers\Delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "poid"', 'APPPATH\\Controllers\\Delete.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Delete->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Delete))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 05:19:15 --> Undefined array key "image"
+in APPPATH\Controllers\Add.php on line 27.
+ 1 APPPATH\Controllers\Add.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'APPPATH\\Controllers\\Add.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Add->add_product()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Add))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 05:51:46 --> Cannot use object of type stdClass as array
+in APPPATH\Views\pages\basic_table.php on line 274.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/basic_table', [], true)
+ 4 APPPATH\Controllers\Home.php(21): view('pages/basic_table')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->basic_table()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 09:57:15 --> Undefined array key "login"
+in APPPATH\Views\pages\display.php on line 109.
+ 1 APPPATH\Views\pages\display.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "login"', 'APPPATH\\Views\\pages\\display.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/display', [], true)
+ 5 APPPATH\Controllers\Home.php(73): view('pages/display')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->display()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 09:57:40 --> Undefined variable $next
+in APPPATH\Views\pages\display.php on line 210.
+ 1 APPPATH\Views\pages\display.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $next', 'APPPATH\\Views\\pages\\display.php', 210)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/display', [], true)
+ 5 APPPATH\Controllers\Home.php(73): view('pages/display')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->display()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 09:57:44 --> Undefined variable $next
+in APPPATH\Views\pages\display.php on line 210.
+ 1 APPPATH\Views\pages\display.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $next', 'APPPATH\\Views\\pages\\display.php', 210)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\display.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/display', [], true)
+ 5 APPPATH\Controllers\Home.php(73): view('pages/display')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->display()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:11:09 --> Undefined variable $row1
+in APPPATH\Views\pages\buttons.php on line 249.
+ 1 APPPATH\Views\pages\buttons.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row1', 'APPPATH\\Views\\pages\\buttons.php', 249)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:11:44 --> Attempt to read property "sid" on array
+in APPPATH\Views\pages\buttons.php on line 249.
+ 1 APPPATH\Views\pages\buttons.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "sid" on array', 'APPPATH\\Views\\pages\\buttons.php', 249)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-18 12:23:15 --> Unknown column 'status' in 'where clause'
+CRITICAL - 2022-07-18 12:23:15 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `school`
+WHERE `status` = \'active\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `school`
+WHERE `status` = \'active\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `school`
+WHERE `status` = \'active\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `school`
+WHERE `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Views\pages\add.php(13): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\add.php')
+ 9 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/add', [], true)
+11 APPPATH\Controllers\Home.php(65): view('pages/add')
+12 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->add()
+13 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+14 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:27:20 --> Attempt to read property "sid" on array
+in APPPATH\Views\pages\add.php on line 16.
+ 1 APPPATH\Views\pages\add.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "sid" on array', 'APPPATH\\Views\\pages\\add.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/add', [], true)
+ 5 APPPATH\Controllers\Home.php(65): view('pages/add')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->add()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:47:25 --> Undefined array key "sid"
+in APPPATH\Views\pages\buttons.php on line 259.
+ 1 APPPATH\Views\pages\buttons.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sid"', 'APPPATH\\Views\\pages\\buttons.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:48:06 --> Undefined array key "sid"
+in APPPATH\Views\pages\buttons.php on line 259.
+ 1 APPPATH\Views\pages\buttons.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sid"', 'APPPATH\\Views\\pages\\buttons.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:48:18 --> Undefined array key "sid"
+in APPPATH\Views\pages\buttons.php on line 259.
+ 1 APPPATH\Views\pages\buttons.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sid"', 'APPPATH\\Views\\pages\\buttons.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:49:17 --> Undefined array key "sid"
+in APPPATH\Views\pages\buttons.php on line 259.
+ 1 APPPATH\Views\pages\buttons.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sid"', 'APPPATH\\Views\\pages\\buttons.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\buttons.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/buttons', [], true)
+ 5 APPPATH\Controllers\Home.php(29): view('pages/buttons')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->buttons()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-18 12:55:50 --> ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed when a session is active', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 71)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(71): ini_set('session.save_path', 'FCPATH\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(606): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(192): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(585): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\HTTP\RedirectResponse.php(72): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Controllers\Display.php(15): CodeIgniter\HTTP\RedirectResponse->back()
+10 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+11 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+12 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -41,7 +41,7 @@ $routes->get('/index', 'Home::index');
 $routes->get('/basic_elements', 'Home::basic_elements');
 $routes->get('/basic_table', 'Home::basic_table');
 $routes->get('/blank_page', 'Home::blank_page');
-$routes->get('/buttons', 'Home::buttons');
+$routes->get('/school_list', 'Home::school_list');
 $routes->get('/chartjs', 'Home::chartjs');
 $routes->get('/dropdowns', 'Home::dropdowns');
 $routes->get('/error_404', 'Home::error_404');
@@ -51,13 +51,14 @@ $routes->get('/mdi', 'Home::mdi');
 $routes->get('/register', 'Home::register');
 $routes->get('/typography', 'Home::typography');
 // Routing for school
-$routes->post('/add', 'Add::add');
-$routes->get('/delete', 'Delete::delete');
-$routes->get('/upload', 'Home::upload');
-$routes->get('/display', 'Home::display');
+$routes->post('/add', 'Products::add_product');
+
+$routes->post('/delete', 'Delete::delete');
+$routes->post('/display', 'Display::school_display');
+
 $routes->post('/update', 'Home::update');
-// Routing for school
-$routes->post('/stock', 'Add::stock');
+// Routing for inventory
+$routes->post('/stock', 'Stock::add_stock');
 // Routing for register and login
 $routes->post('/register', 'Register::register');
 $routes->post('/login', 'Login::login');

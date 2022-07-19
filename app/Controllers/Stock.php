@@ -4,32 +4,9 @@ namespace App\Controllers;
 
 // use CodeIgniter\Controller;
 
-class Add extends BaseController
+class Stock extends BaseController
 {
-    public function add()
-    {
-        helper(['buttons', 'url']);
-        if (!$this->validate([
-            'pname' => ['label' => 'Product Name', 'rules' => 'required'],
-            'category' => ['label' => 'Category', 'rules' => 'required'],            
-        ])) {
-            return view('pages/' . "buttons", [
-                'validation' => $this->validator,
-            ]);
-        }
-
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $db = db_connect();
-            
-            $pname = $_POST["pname"];
-            $cat = $_POST["category"];            
-            $sid = $_POST["sid"];
-            $sql = 'INSERT INTO products ( pname, category, sid) VALUES ( ?, ?, ?)';
-            $db->query($sql, [ $pname, $cat, $sid]);
-            return redirect()->back();           
-        }
-    }
-    public function stock()
+public function add_stock()
     {
         helper(['basic_table', 'url']);
         if (!$this->validate([

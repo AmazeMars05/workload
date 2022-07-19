@@ -245,21 +245,9 @@
 
                                 <?php
                                 // Display the products as pagination with maximum products in a page.
-                                $limit = 5;
-                                $page = (isset($_GET['page']) && is_numeric($_GET['page'])) ? $_GET['page'] : 1;
-                                $paginationStart = ($page - 1) * $limit;
-
-                                $db = mysqli_connect('localhost', 'Mann', 'Charumann@05', 'uniforms');
-                                $query = "SELECT COUNT(*) AS poid FROM products";
-                                $result = mysqli_query($db, $query);
-                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                                $total = $row['poid'];
-                                $pages = ceil($total / $limit);
-
-                                $query1 = "SELECT * FROM products WHERE sid=2 ORDER by poid LIMIT $paginationStart,$limit";
-                                $result1 = mysqli_query($db, $query1);
-
-
+                                $db = db_connect();
+                                $sql = $db->query("SELECT * FROM products WHERE sid=2 ORDER by poid");
+                                $result = $sql->getResult();
                                 ?>
                                 <div class="table table-responsive">
                                     <table class="table table-striped w-100">
@@ -272,20 +260,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC)) { ?>
+                                            <?php foreach ($result as $row1) { ?>
                                                 <tr>
-                                                    <!-- <form method="post" id="the-form" enctype="multipart/form-data"> -->
-                                                    <td><?php echo ($row1['poid']); ?></td>
-                                                    <td><?php echo ($row1['pname']); ?></td>
-                                                    <input type="hidden" class="form-control" id="sid" name="sid" value="<?php echo ($row1['sid']);  ?>" readonly>
-                                                    <td><?php echo ($row1['category']); ?></td>
-                                                    <!-- <td><img src="" height="80px" width="150px">
-                                                <input name="fileToUpload[]" class="form-control" type="file" multiple>
-                                            </td> -->
-
-                                                    <!-- <td><button type="submit" formaction="update" class="form-control">Update</button></td> -->
-                                                    <td><button type="button" class="form-control"><a href="delete">Delete</a></button></td>
-                                                    <!-- </form> -->
+                                                    <form method="post" id="the-form" action="delete" enctype="multipart/form-data">
+                                                        <td><?php echo ($row1->poid); ?></td>
+                                                        <input type="hidden" class="form-control" id="poid" name="poid" value="<?php echo ($row1->poid); ?>">
+                                                        <td><?php echo ($row1->pname); ?></td>
+                                                        <input type="hidden" class="form-control" id="sid" name="sid" value="<?php echo ($row1->sid);  ?>" readonly>
+                                                        <td><?php echo ($row1->category); ?></td>
+                                                        <!-- <td><img src="" height="80px" width="150px">                                                
+                                                    </td> -->
+                                                        <td><button type="submit" class="btn btn-outline-danger">Delete</button></td>
+                                                    </form>
                                                 </tr>
                                             <?php
                                             } ?>
@@ -310,6 +296,7 @@
                                             <option value="F">Female</option>
                                         </select>
                                     </div>
+                                    <input name="fileToUpload[]" class="form-control" type="file" multiple>
                                     <button type="submit" class="btn btn-outline-primary btn-lg mb-2">Add</button>
                                 </form>
                             </div>
@@ -318,39 +305,6 @@
                     <div class="container pt-5">
                         <div class="row">
                             <div class="col-sm-4">
-                            </div>
-                            <div class="col-sm-4">
-                                <nav aria-label="...">
-                                    <ul class="pagination">
-                                        <li class="page-item <?php if ($page <= 1) {
-                                                                    echo 'disabled';
-                                                                } ?>">
-                                            <a class="page-link" href="<?php if ($page <= 1) {
-                                                                            echo '#';
-                                                                        } else {
-                                                                            echo "?page=" . $prev;
-                                                                        } ?>">Previous</a>
-                                        </li>
-
-                                        <?php for ($i = 1; $i <= $pages; $i++) : ?>
-                                            <li class="page-item <?php if ($page == $i) {
-                                                                        echo 'active';
-                                                                    } ?>">
-                                                <a class="page-link" href="new-user-requests.php?page=<?= $i; ?>"> <?= $i; ?> </a>
-                                            </li>
-                                        <?php endfor; ?>
-
-                                        <li class="page-item <?php if ($page >= $pages) {
-                                                                    echo 'disabled';
-                                                                } ?>">
-                                            <a class="page-link" href="<?php if ($page >= $pages) {
-                                                                            echo '#';
-                                                                        } else {
-                                                                            // echo "?page=" . $next;
-                                                                        } ?>">Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                             <div class="col-sm-4">
                             </div>

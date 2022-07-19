@@ -10,13 +10,13 @@ class Delete extends BaseController
     {
         
 
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $db = db_connect();
-            $poid = $_GET["poid"];
+            $poid = $_POST["poid"];
             
             $sql = 'DELETE FROM products WHERE poid = ?';
             $db->query($sql, [$poid]);
-            return redirect('blank_page');           
+            return redirect()->back();
         }
     }
 }

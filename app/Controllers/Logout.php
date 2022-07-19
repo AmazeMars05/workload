@@ -11,12 +11,6 @@ class Logout extends BaseController
         session_start();
         session_unset();
         session_destroy();
-
-        // if ($_SESSION['username'] == null) {
-        //     header("Location: login");
-        //     echo "<a href=login>Click here to login</a>";
-        // } else {
-            return redirect('login');
-        // }
+        return redirect('login');
     }
 }
