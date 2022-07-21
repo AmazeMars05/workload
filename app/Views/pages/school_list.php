@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    
     <div class="container-scroller">
         <!-- partial:partials/_sidebar.html -->
         <?php
@@ -239,9 +240,7 @@
                                 <h1 class="card-title">
                                     <center>Available Schools</center>
                                 </h1>
-                                <p class="card-description"> Available schools list.</p>
-                                <?php $sclmdl = new \App\Models\SchoolModel();
-                                $schools = $sclmdl->asArray()->findAll(); ?>
+                                <p class="card-description"> Available schools list.</p>                                
                                 <div class="table table-responsive">
                                     <table class="table table-striped w-100">
                                         <thead>
@@ -283,9 +282,7 @@
                             <div class="card-body">
                                 <h1 class="card-title"> <center>School product list</center>
                                     <form class="forms-sample" action="display" method="post">
-                                        <div class="input-group mb-2 mr-sm-2">
-                                            <?php $sclmdl = new \App\Models\SchoolModel();
-                                            $schools = $sclmdl->asArray()->findAll(); ?>
+                                        <div class="input-group mb-2 mr-sm-2">                                            
                                             <select class="form-control mb-2" id="exampleSelectGender" name="sid" onchange="this.form.submit()">
                                                 <option value="">-</option>
                                                 <?php
@@ -299,10 +296,7 @@
                                 </h1>
                                 <p class="card-description"> Selected school available products list.</p>
 
-                                <?php
-                                $p_model = new \App\Models\StockModel();
-                                $result = $p_model->asArray()->where('sid', $_SESSION['sid'])->findAll();
-                                ?>
+                                
                                 <div class="table table-responsive">
                                     <table class="table table-striped w-100">
                                         <thead>
@@ -317,7 +311,7 @@
                                                 <tr>
                                                     <td><?php echo ($row1['sku']); ?></td>
                                                     <td><?php echo ($row1['pname']); ?></td>
-                                                    <td><img src="assets\images<?php echo ($row1['image']); ?>" height="80px" width="150px" />
+                                                    <td><img src="public/uploads/<?php echo ($row1['image']); ?>" height="80px" width="150px" />
                                                     </td>
                                                 </tr>
                                             <?php

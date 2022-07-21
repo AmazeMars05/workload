@@ -30,10 +30,10 @@ class Login extends BaseController
                 break;
             }
             if ($oldpass == $pass and $oldname == $uname) {
-                session_start();
-                $_SESSION['login'] = true;
-                $_SESSION['username'] = $uname;
-                $_SESSION['sid'] = 1;
+                $session = session();
+                $session->set('login', true);
+                $session->set('username', $uname);
+                $session->set('sid', 1);
                 return redirect('index');
             }
             echo "<h1>User not registered, or invalid details.";

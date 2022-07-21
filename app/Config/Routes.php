@@ -38,10 +38,10 @@ $routes->set404Override();
 // Routing to main pages
 $routes->get('/', 'Home::login');
 $routes->get('/index', 'Home::index');
-$routes->get('/basic_elements', 'Home::basic_elements');
+$routes->get('/bill', 'Home::bill');
 $routes->get('/inventory', 'Home::inventory');
 $routes->get('/blank_page', 'Home::blank_page');
-$routes->get('/school_list', 'Home::school_list');
+$routes->get('/school-list', 'Home::school_list');
 $routes->get('/chartjs', 'Home::chartjs');
 $routes->get('/dropdowns', 'Home::dropdowns');
 $routes->get('/error_404', 'Home::error_404');

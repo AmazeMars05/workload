@@ -22,12 +22,18 @@ class Stock extends BaseController
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $p_model = new \App\Models\StockModel();
+            $file = $this->request->getFile('image');
+            if ($file->isValid() && !$file->hasMoved()) {
+                $imageName = $file->getName();
+                $file->move('public/uploads/', $imageName);
+            }
+
             $data = [
                 'pname' => $_POST["pname"],
-                'image' => $this->request->getFile("image"),
+                'image' => $imageName,
                 'sid' => $_POST["sid"],
                 'quantity' => $_POST["quantity"],
-                'size' > $_POST['size'],
+                'size' => $_POST['size'],
                 'price' => $_POST["price"],
             ];
             $p_model->insert($data);           

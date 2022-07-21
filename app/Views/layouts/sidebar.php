@@ -65,7 +65,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="basic_elements">
+            <a class="nav-link" href="bill">
                 <span class="menu-icon">
                     <i class="mdi mdi-playlist-play"></i>
                 </span>
@@ -73,7 +73,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="school_list">
+            <a class="nav-link" href="school-list">
                 <span class="menu-icon">
                     <i class="mdi mdi-playlist-play"></i>
                 </span>

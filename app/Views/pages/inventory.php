@@ -245,14 +245,11 @@
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                            
                                 <h1 class="card-title">
                                     <center>Inventory</center>
                                 </h1>
                                 <form class="forms-sample" action="display" method="post">
-                                    <div class="input-group mb-2 mr-sm-2">
-                                        <?php $sclmdl = new \App\Models\SchoolModel();
-                                        $schools = $sclmdl->asArray()->findAll(); ?>
+                                    <div class="input-group mb-2 mr-sm-2">                                        
                                         <select class="form-control mb-2" id="exampleSelectGender" name="sid" onchange="this.form.submit()">
                                             <option value="">-</option>
                                             <?php
@@ -265,10 +262,7 @@
                                 </form>
                                 <p class="card-description"> Stock and pricing of available products.
                                 </p>
-                                <?php
-                                $p_model = new \App\Models\StockModel();
-                                $result = $p_model->asArray()->where('sid', $_SESSION['sid'])->findAll();
-                                ?>
+                                
                                 <div class="table-responsive">
                                     <table class="table table-striped">
                                         <thead>
