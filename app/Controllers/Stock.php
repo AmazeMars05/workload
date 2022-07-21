@@ -6,31 +6,32 @@ namespace App\Controllers;
 
 class Stock extends BaseController
 {
-public function add_stock()
+    public function add_stock()
     {
-        helper(['basic_table', 'url']);
+        helper(['inventory', 'url']);
         if (!$this->validate([
             'pname' => ['label' => 'Product Name', 'rules' => 'required'],
             'size' => ['label' => 'Size', 'rules' => 'required'],
-            'category' => ['label' => 'Category', 'rules' => 'required'],
+            'price' => ['label' => 'Price', 'rules' => 'required'],
             'quantity' => ['label' => 'Quantity', 'rules' => 'required'],
         ])) {
-            return view('pages/' . "basic_table", [
+            return view('pages/' . "inventory", [
                 'validation' => $this->validator,
             ]);
         }
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $db = db_connect();
-            
-            $pname = $_POST["pname"];
-            $cat = $_POST["category"];            
-            $sid = $_POST["sid"];
-            $qty = $_POST["quantity"];
-            $size = $_POST["size"];
-            $sql = 'INSERT INTO stock ( pname, category, sid, size, quantity) VALUES ( ?, ?, ?, ?, ?)';
-            $db->query($sql, [ $pname, $cat, $sid, $size, $qty]);
-            return redirect()->back();           
+            $p_model = new \App\Models\StockModel();
+            $data = [
+                'pname' => $_POST["pname"],
+                'image' => $this->request->getFile("image"),
+                'sid' => $_POST["sid"],
+                'quantity' => $_POST["quantity"],
+                'size' > $_POST['size'],
+                'price' => $_POST["price"],
+            ];
+            $p_model->insert($data);           
+            return redirect()->back();
         }
     }
 }

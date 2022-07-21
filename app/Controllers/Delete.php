@@ -6,16 +6,25 @@ namespace App\Controllers;
 
 class Delete extends BaseController
 {
-    public function delete()
-    {
-        
-
+    public function delete_product()
+    {        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $db = db_connect();
-            $poid = $_POST["poid"];
+            $db = new \App\Models\StockModel();
+            $sku = $_POST["sku"];
             
-            $sql = 'DELETE FROM products WHERE poid = ?';
-            $db->query($sql, [$poid]);
+            $db->where('sku', $sku)->delete();            
+            return redirect()->back();
+        }
+    }
+    public function delete_school()
+    {        
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $sclmdl = new \App\Models\SchoolModel();
+            
+            $sid = $_POST["sid"];
+            
+            
+            $sclmdl->where('sid', $sid)->delete();
             return redirect()->back();
         }
     }

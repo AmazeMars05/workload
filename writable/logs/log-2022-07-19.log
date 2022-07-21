@@ -1,0 +1,91 @@
+CRITICAL - 2022-07-19 04:02:45 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('C:\\xampp\\htdocs\\bill-software\\billing-software')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Display.php(15): redirect('buttons')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 04:06:29 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('C:\\xampp\\htdocs\\bill-software\\billing-software')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Display.php(15): redirect('buttons')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 04:16:37 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('C:\\xampp\\htdocs\\bill-software\\billing-software')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Display.php(15): redirect('buttons')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 04:16:55 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('C:\\xampp\\htdocs\\bill-software\\billing-software')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Display.php(15): redirect('buttons')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 04:17:08 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('C:\\xampp\\htdocs\\bill-software\\billing-software')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Display.php(15): redirect('buttons')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 23:37:18 -->  route cannot be found while reverse-routing.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 56.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(56): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('C:\\xampp\\htdocs\\bill-software\\billing-software')
+ 2 SYSTEMPATH\Common.php(863): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Display.php(15): redirect('buttons')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Display->school_display()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Display))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-19 23:40:10 --> Unknown column 'stid' in 'order clause'
+CRITICAL - 2022-07-19 23:40:10 --> Unknown column 'stid' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM stock WHERE stock.sid=1 ORDER by stid', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM stock WHERE stock.sid=1 ORDER by stid')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM stock WHERE stock.sid=1 ORDER by stid')
+ 4 APPPATH\Views\pages\basic_table.php(256): CodeIgniter\Database\BaseConnection->query('SELECT * FROM stock WHERE stock.sid=1 ORDER by stid')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\basic_table.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/basic_table', [], true)
+ 8 APPPATH\Controllers\Home.php(21): view('pages/basic_table')
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->basic_table()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 23:59:08 --> Undefined property: stdClass::$stid
+in APPPATH\Views\pages\inventory.php on line 272.
+ 1 APPPATH\Views\pages\inventory.php(272): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$stid', 'APPPATH\\Views\\pages\\inventory.php', 272)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\inventory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/inventory', [], true)
+ 5 APPPATH\Controllers\Home.php(21): view('pages/inventory')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->inventory()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-19 23:59:51 --> Undefined property: stdClass::$category
+in APPPATH\Views\pages\inventory.php on line 277.
+ 1 APPPATH\Views\pages\inventory.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category', 'APPPATH\\Views\\pages\\inventory.php', 277)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\inventory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/inventory', [], true)
+ 5 APPPATH\Controllers\Home.php(21): view('pages/inventory')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->inventory()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

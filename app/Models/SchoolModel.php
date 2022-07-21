@@ -13,7 +13,7 @@ class SchoolModel extends Model
 
     protected $returnType     = 'array';
 
-    // protected $allowedFields = ['name'];
+    protected $allowedFields = ['sid','name'];
 
 }
 ?>

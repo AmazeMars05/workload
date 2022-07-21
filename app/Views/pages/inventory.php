@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <!-- End Plugin css for this page -->
+    <!-- End plugin css fo.r this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
@@ -23,6 +23,7 @@
 <body>
     <div class="container-scroller">
         <!-- partial:partials/_sidebar.html -->
+
         <?php
         include 'check_session.php';
         class check1 extends check
@@ -232,119 +233,131 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <!-- Displaying the school list with delete -->
-                    <div class="col-12 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <h1 class="card-title">
-                                    <center>Available Schools</center>
-                                </h1>
-                                <p class="card-description"> Available schools list.</p>
-                                <?php $sclmdl = new \App\Models\SchoolModel();
-                                $schools = $sclmdl->asArray()->findAll(); ?>
-                                <div class="table table-responsive">
-                                    <table class="table table-striped w-100">
-                                        <thead>
-                                            <tr>
-                                                <th class="text-left">School ID</th>
-                                                <th class="text-left">School Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($schools as $row1) { ?>
-                                                <tr>
-                                                    <form method="post" id="the-form" action="delete_school" enctype="multipart/form-data">
-                                                        <td><?php echo ($row1['sid']); ?></td>
-                                                        <td><?php echo ($row1['name']); ?></td>
-                                                        <input type="hidden" class="form-control" id="sid" name="sid" value="<?php echo ($row1['sid']);  ?>" readonly>
-                                                        <td><button type="submit" class="btn btn-outline-danger">Delete</button></td>
-                                                    </form>
-                                                </tr>
-                                            <?php
-                                            } ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <?php $validation = \Config\Services::validation();
-                                echo $validation->listErrors(); ?>
-                                <form class="form-inline" action="add_school" method="post">
-                                    <div class="input-group mb-2 mr-sm-2">
-                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="sname" placeholder="School name">
-                                    </div>
-                                    <button type="submit" class="btn btn-outline-primary btn-lg mb-2">Add</button>
-                                </form>                                
-                            </div>
-                        </div>
+                    <div class="page-header">
+                        <h3 class="page-title"> Basic Tables </h3>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                            </ol>
+                        </nav>
                     </div>
-                    
-                    <!-- Code for products list starts here -->
-                    <div class="col-12 grid-margin stretch-card">
+                    <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h1 class="card-title"> <center>School product list</center>
-                                    <form class="forms-sample" action="display" method="post">
-                                        <div class="input-group mb-2 mr-sm-2">
-                                            <?php $sclmdl = new \App\Models\SchoolModel();
-                                            $schools = $sclmdl->asArray()->findAll(); ?>
-                                            <select class="form-control mb-2" id="exampleSelectGender" name="sid" onchange="this.form.submit()">
-                                                <option value="">-</option>
-                                                <?php
-                                                foreach ($schools as $scl) { ?>
-                                                    <option value="<?php echo ($scl['sid']); ?>">
-                                                        <?php echo ($scl['name']); ?></option>
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                    </form>
+                            
+                                <h1 class="card-title">
+                                    <center>Inventory</center>
                                 </h1>
-                                <p class="card-description"> Selected school available products list.</p>
-
+                                <form class="forms-sample" action="display" method="post">
+                                    <div class="input-group mb-2 mr-sm-2">
+                                        <?php $sclmdl = new \App\Models\SchoolModel();
+                                        $schools = $sclmdl->asArray()->findAll(); ?>
+                                        <select class="form-control mb-2" id="exampleSelectGender" name="sid" onchange="this.form.submit()">
+                                            <option value="">-</option>
+                                            <?php
+                                            foreach ($schools as $scl) { ?>
+                                                <option value="<?php echo ($scl['sid']); ?>">
+                                                    <?php echo ($scl['name']); ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </form>
+                                <p class="card-description"> Stock and pricing of available products.
+                                </p>
                                 <?php
                                 $p_model = new \App\Models\StockModel();
                                 $result = $p_model->asArray()->where('sid', $_SESSION['sid'])->findAll();
                                 ?>
-                                <div class="table table-responsive">
-                                    <table class="table table-striped w-100">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <th class="text-left">Product ID</th>
-                                                <th class="text-left">Product Name</th>
-                                                <th class="text-left">Image</th>
+                                                <th> Product ID </th>
+                                                <th> Product name </th>
+                                                <th> Size </th>
+                                                <th> Quantity </th>
+                                                <th> Price </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php foreach ($result as $row1) { ?>
                                                 <tr>
-                                                    <td><?php echo ($row1['sku']); ?></td>
-                                                    <td><?php echo ($row1['pname']); ?></td>
-                                                    <td><img src="assets\images<?php echo ($row1['image']); ?>" height="80px" width="150px" />
-                                                    </td>
+                                                    <form method="post" id="the-form" action="delete_product" enctype="multipart/form-data">
+                                                        <td><?php echo ($row1['sku']); ?></td>
+                                                        <input type="hidden" class="form-control" id="sku" name="sku" value="<?php echo ($row1['sku']);  ?>" readonly>
+                                                        <td><?php echo ($row1['pname']); ?></td>
+                                                        <input type="hidden" class="form-control" id="sid" name="sid" value="<?php echo ($row1['sid']);  ?>" readonly>
+                                                        <td><?php echo ($row1['size']); ?></td>
+                                                        <td><?php echo ($row1['quantity']); ?></td>
+                                                        <td><?php echo ($row1['price']); ?></td>
+                                                        <!-- <input type="text" class="form-control" name="sku" value="" readonly> 
+                                                            <td><img src="" height="80px" width="150px">
+                                                
+                                            </td> -->
+                                                        <td><button type="submit" class="btn btn-outline-danger">Delete</button></td>
+                                                    </form>
                                                 </tr>
-                                            <?php
-                                            } ?>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-lg-12 stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">
+                                        <center>Add product in Inventory.</center>
+                                    </h2>
+                                    <p class="card-description"> Enter product details to add to inventory.
+                                    </p>
+                                    <!-- Add products here -->
+                                    <?php $validation = \Config\Services::validation();
+                                    echo $validation->listErrors(); ?>
+                                    <form class="forms-sample" action="stock" method="post" enctype="multipart/form-data">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" name="pname" placeholder="Product name">
+                                        </div>
+                                        <input type="hidden" class="form-control" id="sid" name="sid" value="<?php echo $_SESSION['sid']; ?>">
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <input type="number" class="form-control" id="inlineFormInputGroupUsername2" name="size" placeholder="Size">
+                                        </div>
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <input type="number" class="form-control" id="inlineFormInputGroupUsername2" name="quantity" placeholder="Quantity">
+                                        </div>
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <input type="number" class="form-control" id="inlineFormInputGroupUsername2" name="price" placeholder="Rs.0">
+                                        </div>
+                                        <div class="input-group mb-2 mr-sm-2">
+                                            <input class="form-control" type="file" name="image">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-outline-primary btn-lg mb-2">Add</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <!-- content-wrapper ends -->
-                    <!-- partial:partials/_footer.html -->
-                    <footer class="footer">
-                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
-                        </div>
-                    </footer>
-                    <!-- partial -->
                 </div>
-                <!-- main-panel ends -->
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+                    </div>
+                </footer>
+                <!-- partial -->
             </div>
-            <!-- page-body-wrapper ends -->
+            <!-- main-panel ends -->
         </div>
+        <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
@@ -359,7 +372,8 @@
     <script src="assets/js/settings.js"></script>
     <script src="assets/js/todolist.js"></script>
     <!-- endinject -->
-    
+    <!-- Custom js for this page -->
+    <!-- End custom js for this page -->
 </body>
 
 </html>

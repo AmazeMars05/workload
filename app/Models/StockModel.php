@@ -11,7 +11,6 @@ class StockModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType     = 'array';
     
-    //protected $allowedFields = ['poid', 'quantity'];
+    protected $allowedFields = ['sku','pname','sid','size', 'quantity','price','image'];
 
 }
-?>

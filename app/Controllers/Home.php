@@ -16,9 +16,9 @@ class Home extends BaseController
     {
         return view('pages/'."basic_elements");
     }
-    public function basic_table()
+    public function inventory()
     {
-        return view('pages/'."basic_table");
+        return view('pages/'."inventory");
     }
     public function blank_page()
     {

@@ -3,7 +3,7 @@ if (!isset($_SESSION['login'])) {
     header('location: login');
 }
 $db = mysqli_connect('localhost', 'Mann', 'Charumann@05', 'uniforms');
-$query = "SELECT * FROM products";
+$query = "SELECT * FROM stock";
 $result = mysqli_query($db, $query);
 if (!$result) {
     die(mysqli_error($db));
@@ -158,7 +158,7 @@ if (!$result) {
                                                 ?></option>
                             <?php
                             while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
-                                <option value="<?php echo ($row['poid']); ?>"><?php echo $row['pname']; ?></option>
+                                <option value="<?php echo ($row['sku']); ?>"><?php echo $row['pname']; ?></option>
                             <?php } ?>
                         </select>
 
@@ -172,6 +172,29 @@ if (!$result) {
                             <div class="hide"><img class="mx-auto" style="height: 50px; width: 50px;" src="/test123/products-images/ajax-loader.gif"></div>
                         </div>
                         <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Launch static backdrop modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br>
                         <button type="button" class="btn btn-primary form-control" onclick="addproduct()" id="btnSubmit">Add product</button>
                         <br><br>
                         <div class="error"></div>
