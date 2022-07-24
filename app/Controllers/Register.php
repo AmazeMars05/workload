@@ -32,7 +32,7 @@ class Register extends BaseController
 
         $db->close();
         echo "<script>
-        window.alert(Congrats! You are now successfully registered.);
+        alert(Congrats! You are now successfully registered.);
         </script>";
             echo "<script>
                 var timer = setTimeout(function() {

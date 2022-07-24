@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-// use CodeIgniter\Controller;
+use App\Models\StockModel;
 
 class Stock extends BaseController
 {
@@ -21,7 +21,7 @@ class Stock extends BaseController
         }
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $p_model = new \App\Models\StockModel();
+            $p_model = new StockModel();
             $file = $this->request->getFile('image');
             if ($file->isValid() && !$file->hasMoved()) {
                 $imageName = $file->getName();

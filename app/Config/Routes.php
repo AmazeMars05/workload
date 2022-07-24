@@ -67,6 +67,9 @@ $routes->post('/login', 'Login::login');
 $routes->get('/logout', 'Logout::logout');
 
 
+// Routing for bill
+$routes->post('/calculate', 'Calculate::calculate');
+$routes->post('/save', 'Save::save_data');
 
 
 /*

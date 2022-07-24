@@ -46,6 +46,7 @@
                 }
             })
         } else if (type === 'warning-message-and-cancel') {
+
             swal({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -67,11 +68,20 @@
                         value: true,
                         visible: true,
                         className: "btn btn-primary",
-                        closeModal: true
+                        // type: "submit",
+                        closeModal: false,
                     }
                 }
             })
-
+            
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Poof! Your selected data has been deleted!", {icon: "success",})
+                    .then(function() {
+                        $('#the-form').submit();
+                    });
+                } 
+            });
         } else if (type === 'custom-html') {
             swal({
                 content: {

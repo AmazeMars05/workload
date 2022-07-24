@@ -1,7 +1,4 @@
-<?php session_start();
-if (!isset($_SESSION['login'])) {
-    header('location: login');
-}
+<?php 
 $db = mysqli_connect('localhost', 'Mann', 'Charumann@05', 'uniforms');
 $query = "SELECT * FROM stock";
 $result = mysqli_query($db, $query);
@@ -113,7 +110,7 @@ if (!$result) {
                 <div class="row">
                     <div class="col-sm-2">
                         <p class="text-center pt-5">
-                            <img class="rounded" src="<?php echo ("/test123/profile-pic/") . ($_SESSION['login']) . "display-picture.jpg"; ?>" width="150px" height="140px">
+                            <img class="rounded" src="<?php echo ("/test123/profile-pic/") . (session('login')) . "display-picture.jpg"; ?>" width="150px" height="140px">
                         </p>
                     </div>
                     <div class="col-sm-8">

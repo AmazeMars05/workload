@@ -36,11 +36,9 @@ class Login extends BaseController
                 $session->set('sid', 1);
                 return redirect('index');
             }
-            echo "<h1>User not registered, or invalid details.";
-            echo "You will be redirected to login in 3 seconds";
-            echo "<script>
+            echo "<h1><script>alert('Invalid username or password! Please try again.');
                 var timer = setTimeout(function() {
-                window.location='login'}, 3000);
+                window.location='login'}, 0000);
                 </script></h1>";
         }
     }

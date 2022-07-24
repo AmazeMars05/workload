@@ -65,7 +65,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="bill">
+            <a class="nav-link" href="blank_page">
                 <span class="menu-icon">
                     <i class="mdi mdi-playlist-play"></i>
                 </span>
@@ -114,7 +114,7 @@
             </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="blank_page"> Blank Page </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="bill"> Blank Page </a></li>
                     <li class="nav-item"> <a class="nav-link" href="error_404"> 404 </a></li>
                     <li class="nav-item"> <a class="nav-link" href="error_500"> 500 </a></li>
                     <li class="nav-item"> <a class="nav-link" href="login"> Login </a></li>

@@ -18,7 +18,13 @@ class Home extends BaseController
 
     public function bill()
     {
-        return view('pages/' . "bill");
+        $sclmdl = new SchoolModel();
+        $schools = $sclmdl->asArray()->findAll();
+
+        $sid = session('sid');
+        $p_model = new StockModel();
+        $result = $p_model->asArray()->where('sid', $sid)->findAll();
+        return view('pages/bill', ['schools' => $schools, 'result' => $result]);
     }
     public function inventory()
     {
@@ -32,7 +38,11 @@ class Home extends BaseController
     }
     public function blank_page()
     {
-        return view('pages/' . "blank_page");
+        $sclmdl = new SchoolModel();
+        $schools = $sclmdl->asArray()->findAll();
+
+        $val = [];
+        return view('pages/' . "blank_page", ['schools' => $schools, 'val' => $val]);
     }
     public function school_list()
     {

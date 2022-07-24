@@ -8,9 +8,7 @@ class Logout extends BaseController
 {
     public function logout()
     {
-        session_start();
-        session_unset();
-        session_destroy();
+        session()->destroy();
         return redirect('login');
     }
 }
